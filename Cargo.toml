@@ -19,11 +19,12 @@ env_logger = "0.9"
 
 [build-dependencies]
 bitcoin_hashes = "0.11"
-zip = { version = "0.6", default-features = false, features = ["bzip2", "deflate"] }
+zip = { version = "=0.5.13", default-features = false, features = ["bzip2", "deflate"], optional = true }
 minreq = { version = "2.6.0", default-features = false, features = ["https"] }
 
 [features]
 legacy = []
+msrv1411 = ["zip"]
 
 esplora_a33e97e1 = []
 electrs_0_8_10 = []
